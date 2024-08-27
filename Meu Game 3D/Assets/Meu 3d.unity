@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 1328241592}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -626,6 +626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 100
   rb: {fileID: 0}
+  forcapulo: 10
 --- !u!54 &1546914038
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -732,13 +733,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546914036}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4815897, y: -0.054653067, z: -0.36056572, w: 0.7969171}
+  m_LocalRotation: {x: 0.3099624, y: -0.35127944, z: -0.5156157, w: 0.7174026}
   m_LocalPosition: {x: 717, y: 970, z: -315}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 46.733, y: -39.33, z: -66.242}
+  m_LocalEulerAnglesHint: {x: 4.731, y: -55.738, z: -73.914}
 --- !u!96 &1546914043
 TrailRenderer:
   serializedVersion: 3
