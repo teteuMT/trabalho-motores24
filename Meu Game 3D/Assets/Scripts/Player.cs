@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (Collision.gameObject.tag == "Chao")
+        if (other.gameObject.tag == "Chao")
         {
             noChao = true;
         }
@@ -33,10 +33,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         Debug.Log("Update");
-        float x = Input.GetAxis("Horizontal");
+        float h = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         
-       UnityEngine.Vector3 direcao = new Vector3(x, 0, y);
+       UnityEngine.Vector3 direcao = new Vector3(h, 0, y);
         rb.AddForce(direcao * velocidade * Time.deltaTime, ForceMode.Impulse);
         if (Input.GetKeyDown(KeyCode.Space) && noChao)
             
