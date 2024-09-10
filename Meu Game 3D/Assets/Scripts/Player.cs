@@ -9,15 +9,18 @@ using Vector3 = UnityEngine.Vector3;
 public class Player : MonoBehaviour
 {
     public int velocidade = 10;
-    public Rigidbody rb;
     public int forcapulo = 10;
     public bool noChao = false;
+    
+    private Rigidbody rb;
+    private AudioSource source;
     
     // Start is called before the first frame update
     void Start()
     {
        Debug.Log("Olá mundo"); 
        TryGetComponent(out rb);
+       TryGetComponent(out source);
     }
 
     private void OnCollisionEnter(Collision other)
@@ -41,6 +44,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && noChao)
             
         {
+            source.Play();
+            
           rb.AddForce(Vector3.up * forcapulo, ForceMode.Impulse);
           noChao = false;
         }
