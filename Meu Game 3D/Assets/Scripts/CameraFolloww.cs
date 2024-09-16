@@ -10,7 +10,7 @@ public class CameraFolloww : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        alvo = GameObject.FindWithTag("Plaer").transform;
+        alvo = GameObject.FindWithTag("Player").transform;
         offset = alvo.position - transform.position;
     }
 
